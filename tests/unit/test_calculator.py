@@ -55,3 +55,9 @@ class TestMultiplyDivide:
         """Test dividing by zero raises error"""
         with pytest.raises(ZeroDivisionError):
             divide(5, 0)
+            
+    def power(a, b): return a ** b
+    def square_root(a):
+        if a < 0:
+            raise ValueError("Cannot calculate square root of negative number")
+        return a ** 0.5
