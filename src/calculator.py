@@ -21,6 +21,7 @@ def multiply(a, b):
     print(f"Result: {result}")
     return result
 
+        
 def divide(a, b):
     """Divide a by b with enhanced error handling."""
     if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):

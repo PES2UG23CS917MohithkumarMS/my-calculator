@@ -53,7 +53,7 @@ class TestMultiplyDivide:
 
     def test_divide_by_zero(self):
         """Test dividing by zero raises error"""
-        with pytest.raises(ZeroDivisionError):
+        with pytest.raises(ValueError, match="division by zero"):
             divide(5, 0)
             
     def power(a, b): return a ** b
