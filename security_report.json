@@ -1,6 +1,11 @@
 {
-  "errors": [],
-  "generated_at": "2025-10-09T06:59:28Z",
+  "errors": [
+    {
+      "filename": "src/cli.py",
+      "reason": "syntax error while parsing AST from file"
+    }
+  ],
+  "generated_at": "2025-10-09T17:17:28Z",
   "metrics": {
     "_totals": {
       "CONFIDENCE.HIGH": 0,
@@ -11,7 +16,7 @@
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 32,
+      "loc": 117,
       "nosec": 0,
       "skipped_tests": 0
     },
@@ -37,7 +42,12 @@
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 32,
+      "loc": 61,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src/cli.py": {
+      "loc": 56,
       "nosec": 0,
       "skipped_tests": 0
     }
