@@ -37,10 +37,30 @@ def divide(a, b):
     print(f"Result: {result}")
     return result
 
+def power(a, b):
+    """Raise a to the power of b with input validation and logging."""
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Both arguments must be numbers")
 
+    print(f"Raising {a} to the power of {b}")
+    result = a ** b
+    print(f"Result: {result}")
+    return result
+def square_root(a):
+    """Compute the square root of a number with validation and logging."""
+    if not isinstance(a, (int, float)):
+        raise TypeError("Input must be a number")
+    if a < 0:
+        raise ValueError(f"Cannot compute square root of negative number: {a}")
+
+    print(f"Computing square root of {a}")
+    result = math.sqrt(a)
+    print(f"Result: {result}")
+    return result
 # TODO: Students will add multiply, divide, power, sqrt functions
 
 if __name__ == "__main__":
     print("🧮 Calculator Module")
     print(f"2 + 3 = {add(2, 3)}")
     print(f"5 - 2 = {subtract(5, 2)}")
+    print(f"2 ^ 3 = {power(2, 3)}")
