@@ -2,36 +2,40 @@
 Unit Tests for Calculator
 Students start with 2 passing tests, then add more
 """
+
 import pytest
 from src.calculator import add, divide, subtract, multiply
 
+
 class TestBasicOperations:
     """Test basic arithmetic operations"""
-    
+
     def test_add_positive_numbers(self):
         """Test adding positive numbers"""
         assert add(2, 3) == 5
         assert add(10, 15) == 25
-    
+
     def test_subtract_positive_numbers(self):
         """Test subtracting positive numbers"""
         assert subtract(5, 3) == 2
         assert subtract(10, 4) == 6
 
+
 class TestMultiplyDivideWithValidation:
     """Test multiplication and division with input validation."""
-    
+
     def test_multiply_input_validation(self):
         """Test multiply rejects non-numeric inputs."""
         with pytest.raises(TypeError, match="Both arguments must be numbers"):
             multiply("5", 3)
         with pytest.raises(TypeError, match="Both arguments must be numbers"):
             multiply(5, "3")
-    
+
     def test_divide_input_validation(self):
         """Test divide rejects non-numeric inputs."""
         with pytest.raises(TypeError, match="Division requires numeric inputs"):
             divide("10", 2)
+
 
 class TestMultiplyDivide:
     """Test multiplication and division operations"""
@@ -55,9 +59,11 @@ class TestMultiplyDivide:
         """Test dividing by zero raises error"""
         with pytest.raises(ValueError, match="division by zero"):
             divide(5, 0)
-            
-    def power(a, b): return a ** b
+
+    def power(a, b):
+        return a**b
+
     def square_root(a):
         if a < 0:
             raise ValueError("Cannot calculate square root of negative number")
-        return a ** 0.5
+        return a**0.5
