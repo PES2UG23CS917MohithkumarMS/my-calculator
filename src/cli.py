@@ -70,4 +70,4 @@ if __name__ == "__main__":
     # assert run_cli("square_root", 16).returncode == 0
     # assert run_cli("modulus", 5, 3).returncode == 1
 
-    print("✅ CLI integration self-tests passed.")
+        print("✅ CLI integration self-tests passed.")
