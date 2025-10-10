@@ -7,7 +7,8 @@ import sys
 import click
 from .calculator import add, subtract, multiply, divide, power, square_root
 from click.testing import CliRunner
-from src.cli import calculate
+
+
 
 @click.command()
 @click.argument("operation")
