@@ -4,8 +4,8 @@ Covers add, subtract, multiply, divide, power, and square_root
 """
 
 import pytest
-from src.calculator import add, subtract, multiply, divide, power, square_root
 import math
+from src.calculator import add, subtract, multiply, divide, power, square_root
 
 
 class TestBasicOperations:
