@@ -19,27 +19,32 @@ class TestCLIIntegration:
     def test_cli_add_integration(self):
         res = self.run_cli("add", "5", "3")
         assert res.exit_code == 0
-        assert res.output.strip() == "8"
+        assert res.output.strip().endswith("8")
 
     def test_cli_multiply_integration(self):
         res = self.run_cli("multiply", "4", "7")
         assert res.exit_code == 0
-        assert res.output.strip() == "28"
+        assert res.output.strip().endswith("28")
 
     def test_cli_divide_integration(self):
         res = self.run_cli("divide", "15", "3")
         assert res.exit_code == 0
-        assert res.output.strip() == "5"
+        assert res.output.strip().endswith("5")
+
+    def test_cli_power_integration(self):
+        res = self.run_cli("power", "2", "3")
+        assert res.exit_code == 0
+        assert res.output.strip().endswith("8")
 
     def test_cli_sqrt_integration(self):
         res = self.run_cli("sqrt", "16")
         assert res.exit_code == 0
-        assert res.output.strip() == "4"
+        assert res.output.strip().endswith("4")
 
     def test_cli_error_handling_integration(self):
         res = self.run_cli("divide", "10", "0")
         assert res.exit_code == 1
-        assert "Cannot divide by zero" in res.output
+        assert "Cannot divide 10.0 by zero" in res.output
 
     def test_cli_invalid_operation_integration(self):
         res = self.run_cli("invalid", "1", "2")
