@@ -9,7 +9,6 @@ from .calculator import add, subtract, multiply, divide, power, square_root
 from click.testing import CliRunner
 
 
-
 @click.command()
 @click.argument("operation")
 @click.argument("num1", type=float)
@@ -49,7 +48,6 @@ def calculate(operation, num1, num2=None):
 
 if __name__ == "__main__":
     calculate()
-    
 
     def run_cli(self, *args):
         """Run CLI in-process safely for tests"""
@@ -65,10 +63,9 @@ if __name__ == "__main__":
         ("divide", 9, 3),
         ("power", 2, 3),
     ]:
-        
 
-    # # Test square_root and invalid operation
-    # assert run_cli("square_root", 16).returncode == 0
-    # assert run_cli("modulus", 5, 3).returncode == 1
+        # # Test square_root and invalid operation
+        # assert run_cli("square_root", 16).returncode == 0
+        # assert run_cli("modulus", 5, 3).returncode == 1
 
         print("✅ CLI integration self-tests passed.")
